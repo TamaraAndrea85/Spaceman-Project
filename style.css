@@ -45,12 +45,12 @@ body{
         color: lightslategray;
         font-size: 35px;
      }
-     .mytries{
+     #myTries{
         display: flex; 
         justify-content: center;
         position: absolute;
-        top: 42%;
-        color: lightslategray;
+        top: 45%;
+        color: red;
         font-size: 35px;
 
      }
@@ -81,5 +81,17 @@ button:hover{
     font-size: 150px;
     
 }
+
+#littleMan{
+   display: flex;
+   color: grey;
+   border: 5px ridge darkgray;
+   padding:20px; 
+   top: 68%;
+   left: 2%;
+   position: absolute;
+   width: 180px;
+   height: 250px;
+ }
 
  
