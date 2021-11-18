@@ -1,11 +1,11 @@
- // Array of words
+// Array of words
 const words = ['planet', 'stars', 'astroid', 'moon', 'satilite', 'orbit', 'universe', 'umbra', 'lunar', 'space', 'astronomy', 'eclipse', 'nebula', 'mars', 'meteorite']
 
 // guesses Array
 let myGuesses = []
 
 
-//variables
+//variables"
 let wordSpace = "_"
 let guess = ' '
 let space; //number of spaces in word
@@ -13,187 +13,142 @@ let space; //number of spaces in word
 
 //score
 let tries = 10
-let counter ;
+let counter;
 //Get random word
-let index = Math.floor(Math.random()* words.length)  
+let index = Math.floor(Math.random() * words.length)
 
 //play function
 function play() {
     let userInput = prompt(`would you like to play spaceman? (Y/N)`, "Y")
     console.log(words[index])
-    
-        
-        
-    for(let i = 0; i < words[index].length; i++){
+
+
+
+    for (let i = 0; i < words[index].length; i++) {
         console.log(words[0][i])
-            
+
         let div = document.createElement('div')
         div.classList.add('letters')
-        div.innerHTML=' - '//words[0][i]
+        div.innerHTML = ' - ' //words[0][i]
         document.querySelector('.word-space').append(div)
-           
-    
-    }                                        
+
+
+    }
 }
 //handle click function, inactivates buttons once clicked
 let handleclick = e => {
     e.target.removeEventListener('click', handleclick)
-    e.target.style.backgroundColor= 'grey'
+    e.target.style.backgroundColor = 'grey'
     console.log(e.target.innerHTML)
     myGuesses.push(e.target.innerHTML)
     console.log(myGuesses)
     console.log(words[index].includes(e.target.innerHTML))
-    if(words[index].includes(e.target.innerHTML)){
-        document.querySelector('.word-space').innerHTML= '  '
-        // let correct = document.createElement('ul')
-        
+    if (words[index].includes(e.target.innerHTML)) {
+        document.querySelector('.word-space').innerHTML = '  '
+            // let correct = document.createElement('ul')
 
-        for(let i = 0; i < words[index].length; i++){
-            
+
+        for (let i = 0; i < words[index].length; i++) {
+
             // correct.setAttribute('id','correctLetters' )
             // let guess= document.createElement('li')
             // guess.setAttribute('class','guess')
-            console.log(words[0][i])
-             let div = document.createElement('div')
-             div.classList.add('letter')
-              if (myGuesses.includes(words[index][i])){
+            let div = document.createElement('div')
+            div.classList.add('letters')
+            if (myGuesses.includes(words[index][i])) {
                 // if(words[index]=== '- '){
-                    // guess.innerHTML = '-'
-                    space = 1
-                
-                   
-                 div.innerHTML = words[index][i]
-                        
-                                 
-              } else {
-                 div.innerHTML = ' - '
-         }
-                
+                // guess.innerHTML = '-'
+                space = 1
+
+
+                div.innerHTML = words[index][i]
+
+
+            } else {
+                div.innerHTML = ' - '
+            }
+
             document.querySelector('.word-space').append(div)
-            
+
         }
-             getNumOfTries()         
-            
-              
-} else {
-        tries -- 
         getNumOfTries()
-    
+
+
+    } else {
+        tries--
+        getNumOfTries()
+
     }
-                        
+
 }
-function ans () {
+
+function ans() {
     const buttons = document.querySelectorAll('button')
-    buttons.forEach(button => button.addEventListener('click',handleclick))
-    // buttons.forEach(button => button.addEventListener('click', () => 
-    
-    
-    
+    buttons.forEach(button => button.addEventListener('click', handleclick))
+        // buttons.forEach(button => button.addEventListener('click', () => 
 
 
-    
+
+
+
+
 }
 ans()
 
 
 
- 
 
-function getNumOfTries (){
+
+function getNumOfTries() {
     console.log(tries)
     const showTries = document.querySelector('#myTries')
     showTries.innerHTML = ' You have ' + tries + ' tries'
-    if(tries < 1){
-       setTimeout(() =>{prompt(`Would you like to try again? (Y,N)`, 'Y')
-       showTries.innerHTML = 'You loose!'
+    if (tries < 1) {
+        setTimeout(() => {
+            prompt(`Would you like to try again? (Y,N)`, 'Y')
+            showTries.innerHTML = 'You loose!'
 
-       },2000) 
-      
-       
-        
-               
+        }, 2000)
+
+
+
+
     }
     // if(tries > 0  && words[index].length === myGuesses.length) {
-    
-        if(tries > 0  && Array.from(document.querySelectorAll('.letters')).every(letter => letter.innerHTML !== ' - ')) {
-            // showTries.innerHTML = 'You Win!'
-             setTimeout(() =>{alert(`You Win!`)
-             showTries.innerHTML = 'You Win!'
-     
-             },1000)
-            
-        
-        }
-        
-        
-        
+    Array.from(!document.querySelectorAll('.letters')).forEach(letter => {
+        console.log(letter.innerHTML)
+    })
+    if (tries > 0 && Array.from(document.querySelectorAll('.letters')).every(letter => letter.innerHTML !== ' - ')) {
+        // showTries.innerHTML = 'You Win!'
+        setTimeout(() => {
+            alert(`You Win!`)
+            showTries.innerHTML = 'You Win!'
+
+        }, 1000)
+
+
+    }
+
+
+
 }
 
 
 
 
-function reset(){
-    let playAgain= document.getElementsByClassName('playAgain').addEventListener('click', reset)
-    for(let i = 0; i < words[index].length; i++){
-        console.log(words[0][i])
-            
-        let div = document.createElement('div')
-        div.innerHTML=' - '//words[0][i]
-        document.querySelector('.word-space').append(div)
-           
+
+    let tryAgain = document.getElementsByClassName('try-Again').addEventListener('click', play)
     
-    } 
-    reset()       
-//   playAgain.addEventListener('click',=)
-
-}
-  
 
 
-
-                
- 
-play()
-
-                
-
-                
-
-
-
-            
-           
-
-            
-            
-            
-
-
-        
-        
-
-
-
-
-
-
-
-
-        
     
        
-    
-        
-        
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-        
-    
+
+
+
+
+
+
+
+play()
