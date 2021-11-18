@@ -55,7 +55,7 @@ body{
 
      }
 
-button{
+.letter{
     border-radius: 15px;
     position: relative;
     margin-top: auto;
@@ -63,11 +63,12 @@ button{
     display: inline-block;
     font-size: 45px;
     cursor: pointer;
+    background-color:white;
 
 }  
 
-button:hover{
-   background: rgb(12, 4, 63);
+.letter:hover{
+   background: grey;
    border: solid 1px white;
 }
 
@@ -87,11 +88,31 @@ button:hover{
    color: grey;
    border: 5px ridge darkgray;
    padding:20px; 
-   top: 68%;
-   left: 2%;
+   top: 75%;
+    left: 8%; 
    position: absolute;
    width: 180px;
    height: 250px;
  }
 
- 
+.Try-Again{
+   display: inline-block;
+   background-color: white;
+   color: black;
+   border: dashed 2px white;
+   cursor: pointer;
+   font-size: 30px;
+   width:150px;
+   position: absolute;
+   top: 95%; 
+   text-align: center; 
+   padding: 15px 32px;
+
+} 
+li{
+   text-decoration: none;
+}
+ul{
+   
+}
+   
