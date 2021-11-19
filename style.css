@@ -1,7 +1,7 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: midnightblue;
+    /* background-color: midnightblue; */
     background-image: url(space.webp);
 }
  h1{ 
