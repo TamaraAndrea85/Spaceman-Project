@@ -64,12 +64,12 @@ body{
     font-size: 45px;
     cursor: pointer;
     background-color:white;
+    border: solid 1px white;
 
 }  
-
-.letter:hover{
+button:hover{
    background: grey;
-   border: solid 1px white;
+   
 }
 
 
@@ -83,23 +83,13 @@ body{
     
 }
 
-#littleMan{
-   display: flex;
-   color: grey;
-   border: 5px ridge darkgray;
-   padding:20px; 
-   top: 75%;
-    left: 8%; 
-   position: absolute;
-   width: 180px;
-   height: 250px;
- }
+
 
 .Try-Again{
    display: inline-block;
    background-color: white;
    color: black;
-   border: dashed 2px white;
+   border: dashed 1px white;
    cursor: pointer;
    font-size: 30px;
    width:150px;
@@ -109,5 +99,10 @@ body{
    padding: 15px 32px;
 
 } 
+
+.Try-Again:hover{
+   background-color: grey;
+
+}
 
    

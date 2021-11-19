@@ -6,7 +6,7 @@ let myGuesses = []
 
 
 //variables"
-let wordSpace = "_"
+let wordSpace = ' - '
 let guess = ' '
 let space; //number of spaces in word
 
@@ -45,20 +45,14 @@ let handleclick = e => {
     console.log(words[index].includes(e.target.innerHTML))
     if (words[index].includes(e.target.innerHTML)) {
         document.querySelector('.word-space').innerHTML = '  '
-            // let correct = document.createElement('ul')
+            
 
 
         for (let i = 0; i < words[index].length; i++) {
-
-            // correct.setAttribute('id','correctLetters' )
-            // let guess= document.createElement('li')
-            // guess.setAttribute('class','guess')
             let div = document.createElement('div')
             div.classList.add('letters')
             if (myGuesses.includes(words[index][i])) {
-                // if(words[index]=== '- '){
-                // guess.innerHTML = '-'
-                space = 1
+                
 
 
                 div.innerHTML = words[index][i]
@@ -85,7 +79,8 @@ let handleclick = e => {
 function ans() {
     const buttons = document.querySelectorAll('button')
     buttons.forEach(button => button.addEventListener('click', handleclick))
-        // buttons.forEach(button => button.addEventListener('click', () => 
+
+         
 
 
 
@@ -121,7 +116,7 @@ function getNumOfTries() {
     if (tries > 0 && Array.from(document.querySelectorAll('.letters')).every(letter => letter.innerHTML !== ' - ')) {
         // showTries.innerHTML = 'You Win!'
         setTimeout(() => {
-            alert(`You Win!`)
+            alert('Good Job!')
             showTries.innerHTML = 'You Win!'
 
         }, 1000)
@@ -133,16 +128,22 @@ function getNumOfTries() {
 
 }
 
+//game reset
+
+let tryAgain = document.querySelector('.Try-Again')
+tryAgain.addEventListener('click', () => {
+    window.location.reload(true)
+
+    
+  
 
 
 
-
-    let tryAgain = document.getElementsByClassName('try-Again').addEventListener('click', play)
     
 
 
     
-       
+})
 
 
 
@@ -151,4 +152,18 @@ function getNumOfTries() {
 
 
 
-play()
+    
+    
+
+    
+    
+        
+
+
+
+
+
+
+
+
+ play()
