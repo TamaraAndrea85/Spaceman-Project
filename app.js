@@ -5,15 +5,15 @@ const words = ['planet', 'stars', 'astroid', 'moon', 'satilite', 'orbit', 'unive
 let myGuesses = []
 
 
-//variables"
+//spaces
 let wordSpace = ' - '
-let guess = ' '
-let space; //number of spaces in word
 
 
-//score
+
+
+//# of remaining tries
 let tries = 10
-let counter;
+
 //Get random word
 let index = Math.floor(Math.random() * words.length)
 
@@ -25,7 +25,7 @@ function play() {
 
 
     for (let i = 0; i < words[index].length; i++) {
-        console.log(words[0][i])
+        // console.log(words[0][i])
 
         let div = document.createElement('div')
         div.classList.add('letters')
@@ -38,7 +38,7 @@ function play() {
 //handle click function, inactivates buttons once clicked
 let handleclick = e => {
     e.target.removeEventListener('click', handleclick)
-    e.target.style.backgroundColor = 'grey'
+    e.target.style.backgroundColor = 'rgb(173, 173, 240)'
     console.log(e.target.innerHTML)
     myGuesses.push(e.target.innerHTML)
     console.log(myGuesses)
@@ -100,7 +100,7 @@ function getNumOfTries() {
     showTries.innerHTML = ' You have ' + tries + ' tries'
     if (tries < 1) {
         setTimeout(() => {
-            prompt(`Would you like to try again? (Y,N)`, 'Y')
+            alert('Awww better luck next time :(')
             showTries.innerHTML = 'You loose!'
 
         }, 2000)
