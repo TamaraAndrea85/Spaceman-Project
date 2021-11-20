@@ -24,7 +24,8 @@ SPACEMAN
 
 
 ### Unsolved Problems
-*Would have liked to add a spaceship or some sort of animation, for a wine or lose situation
+*Would have liked to add a spaceship or some sort of animation, for a win or lose situation
+
 ### User Stories
 *This game is user against computer, guessing a hidden word, with limited tries.
 
