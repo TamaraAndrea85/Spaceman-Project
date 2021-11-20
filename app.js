@@ -39,10 +39,8 @@ function play() {
 let handleclick = e => {
     e.target.removeEventListener('click', handleclick)
     e.target.style.backgroundColor = 'rgb(173, 173, 240)'
-    console.log(e.target.innerHTML)
+    
     myGuesses.push(e.target.innerHTML)
-    console.log(myGuesses)
-    console.log(words[index].includes(e.target.innerHTML))
     if (words[index].includes(e.target.innerHTML)) {
         document.querySelector('.word-space').innerHTML = '  '
             
@@ -95,15 +93,14 @@ ans()
 
 
 function getNumOfTries() {
-    console.log(tries)
     const showTries = document.querySelector('#myTries')
     showTries.innerHTML = ' You have ' + tries + ' tries'
     if (tries < 1) {
         setTimeout(() => {
             alert('Awww better luck next time :(')
-            showTries.innerHTML = 'You loose!'
+            showTries.innerHTML = 'You lose!'
 
-        }, 2000)
+        }, 1000)
 
 
 
@@ -111,10 +108,8 @@ function getNumOfTries() {
     }
     // if(tries > 0  && words[index].length === myGuesses.length) {
     Array.from(!document.querySelectorAll('.letters')).forEach(letter => {
-        console.log(letter.innerHTML)
     })
     if (tries > 0 && Array.from(document.querySelectorAll('.letters')).every(letter => letter.innerHTML !== ' - ')) {
-        // showTries.innerHTML = 'You Win!'
         setTimeout(() => {
             alert('Good Job!')
             showTries.innerHTML = 'You Win!'
@@ -146,24 +141,4 @@ tryAgain.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
-
-    
-    
-
-    
-    
-        
-
-
-
-
-
-
-
-
- play()
+play()

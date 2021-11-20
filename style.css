@@ -9,14 +9,23 @@ body{
      justify-content: center;
      position: absolute;
      top: 0%;
-     color: white;
      font-size: 125px;
+     background: linear-gradient(45deg, #302a49, #70678f,#302a49);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+     -webkit-text-fill-color: transparent;
+   
+   
+     
+     
 } 
 
 .rules{
     display: flex;
     font-size: 30px;
-    color: white;
+    color:rgb(173, 173, 240);
     text-align: center;
     position: absolute;
     bottom: 60%;
@@ -34,7 +43,7 @@ body{
         justify-content: center;
         position: absolute;
         top: 35%;
-        color: lightslategray;
+        color: rgb(58, 53, 94);
         font-size: 35px;
 
      }
@@ -43,7 +52,7 @@ body{
         justify-content: center;
         position: absolute;
         top: 39%;
-        color: lightslategray;
+        color: rgb(173, 173, 240);
         font-size: 35px;
      }
      #myTries{
@@ -64,7 +73,7 @@ body{
     display: inline-block;
     font-size: 45px;
     cursor: pointer;
-    background-color:white;
+    background-image:white;
     border: solid 1px white;
 
 }  
